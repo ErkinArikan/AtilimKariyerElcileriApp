@@ -25,81 +25,49 @@ struct MainView: View {
     #warning("Atılım blink uygulmasından bakarak çorlayabiliriz accık uygulamalara bak çorla ingilizcesini de ekleyebiliriz o nasıl oluyor bakaraız bi. ")
     #warning("Kesinlikle kendi tabviewını yap çorla gitsin bir yerden")
     
-    @State var selectedTab:Tab = .person
+    // MARK: -PROPERTIES
+    @AppStorage("selectedTab") var selectedTab:Tab = .people
+    
+    
+    // MARK: -BODY
     var body: some View {
         
         NavigationStack {
             ZStack {
                 LinearGradient(colors: [Color("MywhiteColor")], startPoint:.top, endPoint: .bottom).ignoresSafeArea(.all,edges: .all)
-                VStack {
-                    if selectedTab == .person {
-                        PersonsView()
-                            
-                    }
+
+                   
+                switch selectedTab {
+                case .house:
+                    HomeView()
+                case .messages:
+                    Text("Message view")
+                case .people:
+                    PersonsView()
+                case .gear:
+                    ActivitiyView()
+                } //:switch
                     
-                    if selectedTab == .house{
-                        HomeView()
-                    }
+                
                     
-                    if selectedTab == .leaf {
-                        ActivitiyView()
-                    }
-                    
-                    Spacer()
-                    
-                    CustomTabView(selectedTab: $selectedTab)
-                        .padding(EdgeInsets())
+                    CustomTabBar2(selectedTab: selectedTab)
                         
                         
                     
-                }
-            }
+                } //:ZSTack
+            } //:NavStack
         }
         
 
         
         
     }
-}
 
+
+// MARK: -PREVIEW
 #Preview {
     MainView()
 }
 
 
-//        TabView(selection: $selectedTab){
-//
-//
-//            PersonsView()
-//                .tabItem {
-//
-//                    Image(systemName: "graduationcap.fill")
-//
-//
-//                    Text("ELÇİLER")
-//
-//                }
-//                .tag(2)
-//
-//            HomeView()
-//                .tabItem {
-//                    Image(systemName: "house.fill")
-//
-//
-//                    Text("Ev".uppercased())
-//                }
-//                .tag(1)
-//
-//
-//            ActivitiyView()
-//                .tabItem {
-//                    Image(systemName: "character.book.closed.fill")
-//
-//                    Text("Aktiviteler".uppercased())
-//
-//                }
-//                .tag(3)
-//
-//
-//        }
-//        .tint(Color.accentColor)
+

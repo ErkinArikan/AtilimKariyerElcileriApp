@@ -23,12 +23,13 @@ struct PersonViewSearchbar: View {
 //        .padding()
 //        
         VStack(alignment: .leading) {
-                        Text("Outlined Custom TextField Style").font(.title2)
+                        
                         HStack {
                             Image(systemName: "magnifyingglass")
                             TextField("Search...", text: $text)
-                        }.modifier(customViewModifier(roundedCornes: 6, startColor: .orange, endColor: .purple, textColor: .white))
-                    }.padding()
+                        }.modifier(customViewModifier(roundedCornes: 12, startColor: Color(UIColor.systemGray4), endColor: Color(UIColor.systemGray4), textColor: .accent))
+        }.padding(EdgeInsets())
+            .padding(.horizontal)
             }
     }
 
@@ -41,15 +42,15 @@ struct PersonViewSearchbar: View {
     
 }
 
-struct OvalTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(10)
-            .background(Color.accentColor.opacity(0.7))
-            .cornerRadius(20)
-            .shadow(color: .gray, radius: 10)
-    }
-}
+//struct OvalTextFieldStyle: TextFieldStyle {
+//    func _body(configuration: TextField<Self._Label>) -> some View {
+//        configuration
+//            .padding(10)
+//            .background(Color.accentColor.opacity(0.7))
+//            .cornerRadius(20)
+//            .shadow(color: .gray, radius: 10)
+//    }
+//}
 
 struct customViewModifier: ViewModifier {
     var roundedCornes: CGFloat
@@ -64,10 +65,12 @@ struct customViewModifier: ViewModifier {
             .cornerRadius(roundedCornes)
             .padding(3)
             .foregroundColor(textColor)
-            .overlay(RoundedRectangle(cornerRadius: roundedCornes)
-                        .stroke(LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2.5))
+            .overlay(content: {
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .stroke(.linearGradient(colors: [.white.opacity(0.5),.white.opacity(0)], startPoint: .topLeading, endPoint: .bottomTrailing))
+            })
             .font(.custom("Open Sans", size: 18))
 
-            .shadow(radius: 10)
+            .shadow(color: Color(UIColor.systemGray4).opacity(0.3), radius: 20,x:0,y:20)
     }
 }

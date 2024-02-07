@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D5446F22B6E769E0036B0F2 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5446F12B6E769E0036B0F2 /* PersonDetailView.swift */; };
 		4D945CA52B6E5CDC00B7848E /* PersonViewNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */; };
 		4D945CA72B6E64B800B7848E /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D945CA62B6E64B800B7848E /* PersonListView.swift */; };
+		4DC5CCE52B73EFAD00F261B3 /* CustomTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5CCE42B73EFAD00F261B3 /* CustomTabBar2.swift */; };
 		4DE476EE2B6E8F2600779130 /* PersonViewSearchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */; };
-		4DE476F12B6FB2DC00779130 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE476F02B6FB2DC00779130 /* CustomTabView.swift */; };
 		4DE476F52B6FC77700779130 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE476F42B6FC77700779130 /* LandingPage.swift */; };
 		4DE99E9A2B70F9EE007284FE /* CardPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE99E992B70F9EE007284FE /* CardPractice.swift */; };
 		4DE99E9C2B70FBF3007284FE /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE99E9B2B70FBF3007284FE /* Blur.swift */; };
@@ -50,11 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D5446F12B6E769E0036B0F2 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 		4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewNavbar.swift; sourceTree = "<group>"; };
 		4D945CA62B6E64B800B7848E /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		4DC5CCE42B73EFAD00F261B3 /* CustomTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar2.swift; sourceTree = "<group>"; };
 		4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewSearchbar.swift; sourceTree = "<group>"; };
-		4DE476F02B6FB2DC00779130 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		4DE476F42B6FC77700779130 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		4DE99E992B70F9EE007284FE /* CardPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPractice.swift; sourceTree = "<group>"; };
 		4DE99E9B2B70FBF3007284FE /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
@@ -204,9 +202,9 @@
 		4DEEE39A2B6D2D85000951D1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4DE476F02B6FB2DC00779130 /* CustomTabView.swift */,
 				4DE99E992B70F9EE007284FE /* CardPractice.swift */,
 				4DE99E9B2B70FBF3007284FE /* Blur.swift */,
+				4DC5CCE42B73EFAD00F261B3 /* CustomTabBar2.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -217,7 +215,6 @@
 				4DEEE3982B6D2D7B000951D1 /* PersonsView.swift */,
 				4D945CA62B6E64B800B7848E /* PersonListView.swift */,
 				4DEEE39B2B6D2D9E000951D1 /* PersonListRowView.swift */,
-				4D5446F12B6E769E0036B0F2 /* PersonDetailView.swift */,
 				4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */,
 				4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */,
 			);
@@ -380,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEEE3972B6D2895000951D1 /* PersonModel.swift in Sources */,
-				4D5446F22B6E769E0036B0F2 /* PersonDetailView.swift in Sources */,
 				4DE99E9C2B70FBF3007284FE /* Blur.swift in Sources */,
 				4D945CA52B6E5CDC00B7848E /* PersonViewNavbar.swift in Sources */,
 				4DEEE3992B6D2D7B000951D1 /* PersonsView.swift in Sources */,
@@ -388,13 +384,13 @@
 				4DEEE3A82B6DB542000951D1 /* HomeView.swift in Sources */,
 				4D945CA72B6E64B800B7848E /* PersonListView.swift in Sources */,
 				4DE476F52B6FC77700779130 /* LandingPage.swift in Sources */,
+				4DC5CCE52B73EFAD00F261B3 /* CustomTabBar2.swift in Sources */,
 				4DE476EE2B6E8F2600779130 /* PersonViewSearchbar.swift in Sources */,
 				4DEEE3682B6D25F0000951D1 /* MainView.swift in Sources */,
 				4DEEE3A02B6D3011000951D1 /* MyConstants.swift in Sources */,
 				4DEEE3662B6D25F0000951D1 /* AkeAppTry1App.swift in Sources */,
 				4DEEE3922B6D27B7000951D1 /* Extensions.swift in Sources */,
 				4DE99E9A2B70F9EE007284FE /* CardPractice.swift in Sources */,
-				4DE476F12B6FB2DC00779130 /* CustomTabView.swift in Sources */,
 				4DEEE39E2B6D2ED4000951D1 /* PersonViewModel.swift in Sources */,
 				4DEEE3A52B6DB37C000951D1 /* ActivitiyView.swift in Sources */,
 			);

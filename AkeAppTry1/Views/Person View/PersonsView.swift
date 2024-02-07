@@ -26,11 +26,12 @@ struct PersonsView: View {
             ZStack{
                 Color("MywhiteColor").ignoresSafeArea(.all,edges: .all)
                     
-                        VStack{
+                VStack(spacing:0){
                             
                             PersonViewNavbar()
                                 .padding(.horizontal)
                             PersonViewSearchbar()
+                    
                             PersonListView()
                         } //:Vstack
                         

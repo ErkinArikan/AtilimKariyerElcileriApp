@@ -27,16 +27,25 @@ struct PersonListView: View {
 //        .frame(width: 400)
         
         
-        ScrollView {
-            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 15, pinnedViews: [], content: {
-                
-                ForEach(vm.person){persons in
-                    PersonListRowView(person: persons)
-                        .padding(.top)
+        VStack {
+            ZStack {
+//                PersonViewSearchbar()
+//                    .zIndex(1)
+//                    .offset(y:-450)
+                ScrollView {
+                    
+                    LazyVGrid(columns: gridLayout, alignment: .center, spacing: 15, pinnedViews: [], content: {
+                       
+                        
+                        ForEach(vm.person){persons in
+                            PersonListRowView(person: persons)
+                                .padding(.top)
+                        }
+                       
+                        
+                    })
                 }
-               
-                
-            })
+            }
         } //:ScrollView
     }
 }

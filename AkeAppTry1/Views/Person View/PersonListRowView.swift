@@ -12,11 +12,13 @@ struct PersonListRowView: View {
     @State var isFlipped:Bool = false
     @State var isBacCardAnimating:Bool = false
     @State var degrees:Double = 0
+   
+    
     var person:PersonModel
     
     var body: some View {
         
-
+        // MARK: -FRONT
         VStack{
             if !isFlipped{
                 
@@ -24,12 +26,12 @@ struct PersonListRowView: View {
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(20)
-                    .frame(width: 300)
+                    .frame(width: 270)
                     .overlay(alignment: .bottomTrailing) {
                         Image(person.image)
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 270)
+                            .frame(height: 240)
                             .offset(x: isAnimating ? 0:20)
                             .animation(.easeOut(duration: 0.9), value: isAnimating)
                             
@@ -37,7 +39,7 @@ struct PersonListRowView: View {
                     .shadow(color: Color.black, radius: 7, x: 0.0, y: 10)
                     .overlay(alignment: .topLeading) {
                         Text(person.name.uppercased())
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
                             .foregroundStyle(Color("CardTextColor"))
                             .fontWeight(.bold)
                             .offset(x:30,y:60)
