@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    #warning("Bu github değişikli için yaratıldı")
+    
     #warning("onboarding view yapabiliriz bir de")
     #warning(" 1- Neden bu appi yaptığımızı bir şekilde anlatmalıyız ( bir soru işareti ekleyere) bir açılır pencere ile şefaf olabilir yandan geir ")
     #warning("ake sembolunu shadow rengini bir ternary operator ile kullanabiliriz eğer karanlık olursa beyaz gölge gibi")
