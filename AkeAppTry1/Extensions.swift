@@ -14,6 +14,7 @@ extension Color{
     static let MyCardTextColor:Color = Color("CardTextColor")
     static let MyCardTextColor2:Color = Color("CardTextColor2")
     static let MyWhiteColor:Color = Color("MywhiteColor")
+    static let MyGrayColor:Color = Color("myGrayColor")
    
 }
 

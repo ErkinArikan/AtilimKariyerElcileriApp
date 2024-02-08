@@ -12,10 +12,9 @@ struct PersonsView: View {
     
     // MARK: - Properties
     @StateObject var vm = PersonViewModel()
+    @State var isAnimating:Bool = false
     
-    init() {
-        print("Sayfa yaratıldı")
-    }
+    @State var isShowing:Bool = false
     
     
     // MARK: - Body
@@ -28,20 +27,34 @@ struct PersonsView: View {
                     
                 VStack(spacing:0){
                             
-                            PersonViewNavbar()
-                                .padding(.horizontal)
+//                            PersonViewNavbar()
+//                                .padding(.horizontal)
+
+                    
+                    
                             PersonViewSearchbar()
                     
                             PersonListView()
                         } //:Vstack
+                
+                GeometryReader{_ in
+                    PersonViewSideMenu(isShowing: $isShowing)
+                        .offset(x: self.isShowing ? 0 : -UIScreen.main.bounds.width)
+                        .animation(.easeInOut(duration: 0.5), value: self.isShowing)
+                    
+                }
+                .background(Color.black.opacity(isShowing ? 0.5:0))
                         
-                        
+               
                         
                     } //:ZStack
                   
                     .listStyle(.plain)
                 .environmentObject(vm)
                 .scrollIndicators(.hidden)
+                .onAppear(perform: {
+                    isAnimating = true
+                })
         }
         
 
@@ -56,3 +69,10 @@ struct PersonsView: View {
     PersonsView()
         
 }
+
+
+
+
+
+
+

@@ -27,7 +27,7 @@ struct PersonViewSearchbar: View {
                         HStack {
                             Image(systemName: "magnifyingglass")
                             TextField("Search...", text: $text)
-                        }.modifier(customViewModifier(roundedCornes: 12, startColor: Color(UIColor.systemGray4), endColor: Color(UIColor.systemGray4), textColor: .accent))
+                        }.modifier(customViewModifier(roundedCornes: 12, startColor: Color.MyGrayColor, endColor: Color.MyGrayColor, textColor: .accent))
         }.padding(EdgeInsets())
             .padding(.horizontal)
             }

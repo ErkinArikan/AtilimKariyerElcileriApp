@@ -27,7 +27,9 @@ struct MainView: View {
     
     // MARK: -PROPERTIES
     @AppStorage("selectedTab") var selectedTab:Tab = .people
+    @State var isAnimating:Bool = false
     
+    @State var isShowing:Bool = false
     
     // MARK: -BODY
     var body: some View {
@@ -35,28 +37,62 @@ struct MainView: View {
         NavigationStack {
             ZStack {
                 LinearGradient(colors: [Color("MywhiteColor")], startPoint:.top, endPoint: .bottom).ignoresSafeArea(.all,edges: .all)
-
-                   
-                switch selectedTab {
-                case .house:
-                    HomeView()
-                case .messages:
-                    Text("Message view")
-                case .people:
-                    PersonsView()
-                case .gear:
-                    ActivitiyView()
-                } //:switch
-                    
                 
-                    
-                    CustomTabBar2(selectedTab: selectedTab)
+                
+                
+                
+                VStack{
+                    HStack {
+                        // MARK: - left button
+                        LeftIcon
+                        
+                        Spacer()
+                        
+                        CenterIcon
                         
                         
+                        Spacer()
+                        
+                        RightIcon
+                        
+                        
+                    } //:Hstack
+                    .padding(.horizontal)
+                    Spacer()
+                    switch selectedTab {
+                    case .house:
+                        HomeView()
+                    case .messages:
+                        Text("Message view")
+                    case .people:
+                        PersonsView()
+                    case .gear:
+                        ActivitiyView()
+                    } //:switch
                     
-                } //:ZSTack
-            } //:NavStack
-        }
+                    
+                }
+                
+                CustomTabBar2(selectedTab: selectedTab)
+                GeometryReader{ _ in
+                    PersonViewSideMenu(isShowing: $isShowing)
+                        .offset(x: self.isShowing ? 0 : -UIScreen.main.bounds.width)
+                        .animation(.easeInOut(duration: 0.5), value: self.isShowing)
+                }
+
+                .background(Color.black.opacity(isShowing ? 0.5:0))
+                
+            } //:ZSTack
+            .onAppear(perform: {
+                isAnimating.toggle()
+            })
+            
+        }//:NavStack
+        
+        
+        
+    }
+        
         
 
         
@@ -71,3 +107,47 @@ struct MainView: View {
 
 
 
+extension MainView{
+    
+    private var LeftIcon: some View{
+        Button(action: {
+            isShowing.toggle()
+        }, label: {
+           Image(systemName: "text.justify")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 35)
+                .offset(x:isAnimating ? 0:-30)
+
+                .scaleEffect(isAnimating ? 1:0.8)
+                .animation(.easeOut(duration: 0.5), value: isAnimating)
+        }) // Left Button
+        
+    }
+    
+    private var CenterIcon: some View {
+        Image("logo")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 95)
+            .offset(y:isAnimating ? 0:-25)
+            .opacity(isAnimating ? 1:0)
+            .animation(.easeOut(duration: 0.5), value: isAnimating)
+            .shadow(color:.white,radius: 10)
+        
+    }
+    
+    private var RightIcon: some View{
+        Button(action: {
+            
+        }, label: {
+            Image(systemName: "gearshape.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 35)
+                .offset(x:isAnimating ? 0:50)
+                .scaleEffect(isAnimating ? 1:0.8)
+                .animation(.easeOut(duration: 0.5), value: isAnimating)
+        })
+    }
+}

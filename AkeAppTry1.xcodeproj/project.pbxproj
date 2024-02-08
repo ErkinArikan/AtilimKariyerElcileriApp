@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D945CA52B6E5CDC00B7848E /* PersonViewNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */; };
 		4D945CA72B6E64B800B7848E /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D945CA62B6E64B800B7848E /* PersonListView.swift */; };
+		4DC197642B751C5100391E15 /* PersonViewSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC197632B751C5100391E15 /* PersonViewSideMenu.swift */; };
 		4DC5CCE52B73EFAD00F261B3 /* CustomTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5CCE42B73EFAD00F261B3 /* CustomTabBar2.swift */; };
 		4DE476EE2B6E8F2600779130 /* PersonViewSearchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */; };
 		4DE476F52B6FC77700779130 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE476F42B6FC77700779130 /* LandingPage.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewNavbar.swift; sourceTree = "<group>"; };
 		4D945CA62B6E64B800B7848E /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		4DC197632B751C5100391E15 /* PersonViewSideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewSideMenu.swift; sourceTree = "<group>"; };
 		4DC5CCE42B73EFAD00F261B3 /* CustomTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar2.swift; sourceTree = "<group>"; };
 		4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewSearchbar.swift; sourceTree = "<group>"; };
 		4DE476F42B6FC77700779130 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				4DEEE39B2B6D2D9E000951D1 /* PersonListRowView.swift */,
 				4D945CA42B6E5CDC00B7848E /* PersonViewNavbar.swift */,
 				4DE476ED2B6E8F2600779130 /* PersonViewSearchbar.swift */,
+				4DC197632B751C5100391E15 /* PersonViewSideMenu.swift */,
 			);
 			path = "Person View";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				4DEEE3972B6D2895000951D1 /* PersonModel.swift in Sources */,
 				4DE99E9C2B70FBF3007284FE /* Blur.swift in Sources */,
 				4D945CA52B6E5CDC00B7848E /* PersonViewNavbar.swift in Sources */,
+				4DC197642B751C5100391E15 /* PersonViewSideMenu.swift in Sources */,
 				4DEEE3992B6D2D7B000951D1 /* PersonsView.swift in Sources */,
 				4DEEE39C2B6D2D9E000951D1 /* PersonListRowView.swift in Sources */,
 				4DEEE3A82B6DB542000951D1 /* HomeView.swift in Sources */,
