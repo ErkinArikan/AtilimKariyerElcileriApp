@@ -8,20 +8,39 @@
 import SwiftUI
 
 struct HomeView: View {
+    //MARK: - PROPERTIES
+    @EnvironmentObject var akeLoginViewModel:AkeLoginViewModel
     
+    //MARK: - BODY
     var body: some View {
         
-        VStack{
+        VStack(alignment:.leading){
             
-            Text("Home View ")
-        }
+            HStack {
+                Text("AKE'de Gündem")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .offset(x:-50)
+                .padding()
+                
+                
+
+            }
+            Spacer()
+            
+           
+            
+        } //:VStack
+       
         
         
         
         
-    }
+    }//:Body
 }
 
+
+//MARK: -  PREVIEW
 #Preview {
     HomeView()
 }

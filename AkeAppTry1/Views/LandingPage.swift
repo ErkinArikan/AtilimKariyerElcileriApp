@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct LandingPage: View {
+    @EnvironmentObject var personViewModel:MockPersonViewModel
+    @EnvironmentObject var akeLoginViewModel:AkeLoginViewModel
     
     @State var isActive:Bool = false
+   
+    
     var body: some View {
         if isActive{
-            MainView()
+            if akeLoginViewModel.userSession != nil {
+                   
+                MainView()
+                 
+            }else{
+                MultiSelectionLoginPage()
+                    
+            }
+            
+           
         }else{
             NavigationStack {
                 ZStack{
-                    Color("MywhiteColor")
+                    Color.MyBackgroundColor2
                         .ignoresSafeArea(.all,edges: .all)
                     
                     VStack{
@@ -25,7 +38,7 @@ struct LandingPage: View {
                         Spacer()
                         Text("Copy right © reserved by Erkin Arıkan ")
                             .font(.caption2)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(Color("MyBlackWhiteColor"))
                         Spacer()
                     }
                     
@@ -38,6 +51,7 @@ struct LandingPage: View {
                     }
                 }
             }
+            
         }
         
     }
@@ -45,4 +59,6 @@ struct LandingPage: View {
 
 #Preview {
     LandingPage()
+        .environmentObject(AkeLoginViewModel())
+        .environmentObject(MockPersonViewModel())
 }

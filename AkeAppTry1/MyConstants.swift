@@ -11,7 +11,7 @@ import SwiftUI
 
 //let examplePersonObj = PersonModel(name: "Erkin", akeTitle: "Kariyer Elçisi", major: "Yazılım Mühendisliği", studentYear: 3, workYear: 1, image: "ErkinPNG")
 
-let examplePersonObj = PersonModel(name: "Alperen", fullName: "Alperen Peker", akeTitle: "Kıdemli kariyer Elçisi", major: "Mekatronik Mühendisliği", doubleMajor: " / Elektrik Elektronik Mühendisliği (ÇAP)",  image: "Alperen Peker",bacwardImage: "AlperenCircleSS")
+let examplePersonObj = MockPersonModel(name: "Erkin", fullName: "Erkin Arıkan", akeTitle: "Kıdemli kariyer Elçisi", major: "Mekatronik Mühendisliği", doubleMajor: " / Elektrik Elektronik Mühendisliği (ÇAP)",  image: "ErkinPNG",bacwardImage: "AlperenCircleSS")
 
 //Lazy VGrid
 let columnSpace:CGFloat = 10
